@@ -6,21 +6,20 @@ def random_predict(number) -> int:
     Returns:
         int: Число попыток
     """
-    predict_number = np.random.randint(1, 101) # загадываем рандомное число, используя генератор рандомных чисел
-    count = 0 # Переменная счетчик
-    minimum_value = 1 # Минимальное значение рассматриваемого интервала
-    maximum_value = 100 # Максимальное значение рассматриваемого интервала
+    predict_number = np.random.randint(1, 101) # загадываем рандомное число
+    count = 0 # счетчик
+    minimum_value = 1 # минимальное значение рассматриваемого интервала
+    maximum_value = 100 # максимальное значение рассматриваемого интервала
    
     while True:
         count += 1
+        predict_number = (maximum_value + minimum_value) // 2
         if predict_number > number:
             maximum_value = predict_number - 1
-            predict_number = (maximum_value + minimum_value) // 2
         elif predict_number < number:
             minimum_value = predict_number + 1
-            predict_number = (maximum_value + minimum_value) // 2
         else:
-            #print(f'Компьютер угадал загаданное число за {count} попыток. Это число {number}')
+          # print(f'Компьютер угадал загаданное число за {count} попыток. Это число {number}')
             break # конец игры и выход из цикла
     return(count)
 # print(f'Количество попыток: {random_predict(number)}')
