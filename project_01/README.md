@@ -5,7 +5,7 @@
 [2. Какой кейс решаем?](https://github.com/vladiq113/sf_data_science/blob/main/project_01/README.md#Какой-кейс-решаем)  
 [3. Краткая информация о данных](https://github.com/vladiq113/sf_data_science/blob/main/project_01/README.md#Краткая-информация-о-данных)  
 [4. Этапы работы над проектом](https://github.com/vladiq113/sf_data_science/blob/main/project_01/README.md#Этапы-работы-над-проектом)  
-[5. Результат](https://github.com/vladiq113/sf_data_science/blob/main/project_01/README.md#Результат)    
+[5. Результаты](https://github.com/vladiq113/sf_data_science/blob/main/project_01/README.md#Результаты)    
 [6. Выводы](https://github.com/vladiq113/sf_data_science/blob/main/project_01/README.md#Выводы) 
 
 ### Описание проекта    
