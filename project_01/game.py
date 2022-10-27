@@ -8,16 +8,20 @@ def random_predict(number) -> int:
     """
     predict_number = np.random.randint(1, 101) # загадываем рандомное число
     count = 0 # счетчик
-    minimum_value = 1 # минимальное значение рассматриваемого интервала
-    maximum_value = 100 # максимальное значение рассматриваемого интервала
+    minimum_number = 1 # минимальное значение рассматриваемого интервала
+    maximum_number = 100 # максимальное значение рассматриваемого интервала
    
     while True:
+        
         count += 1
-        predict_number = (maximum_value + minimum_value) // 2
+        predict_number = (maximum_number + minimum_number) // 2
+       
         if predict_number > number:
-            maximum_value = predict_number - 1
+            maximum_number = predict_number - 1
+        
         elif predict_number < number:
-            minimum_value = predict_number + 1
+            minimum_number = predict_number + 1
+        
         else:
           # print(f'Компьютер угадал загаданное число за {count} попыток. Это число {number}')
             break # конец игры и выход из цикла
@@ -33,9 +37,12 @@ def score_game(random_predict) -> int:
     count_ls = []
     np.random.seed(1)  # фиксируем сид для воспроизводимости
     random_array = np.random.randint(1, 101, size=(1000))  # загадали список чисел
+    
     for number in random_array:
         count_ls.append(random_predict(number))
+
     score = int(np.mean(count_ls))
+
     print(f'Ваш алгоритм угадывает число в среднем за: {score} попытки')
 
 if __name__ == "__main__":
